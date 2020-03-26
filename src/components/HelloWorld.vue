@@ -9,9 +9,16 @@
 
 <script lang="ts">
     import {Component, Prop, Vue} from "vue-property-decorator";
+    import {ipcRenderer} from "electron";
 
     @Component
     export default class HelloWorld extends Vue {
         private show = false;
+
+        created() {
+            ipcRenderer.on('showTheStuff', (e, args) => {
+                this.show = true;
+            });
+        }
     }
 </script>
