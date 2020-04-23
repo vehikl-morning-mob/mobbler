@@ -1,19 +1,21 @@
 <template>
   <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png" />
-    <HelloWorld msg="Welcome to Your Vue.js + TypeScript App" />
+    <Goals />
     <Timer />
+    <Members />
   </div>
 </template>
 
 <script lang="ts">
 import { Component, Vue } from "vue-property-decorator";
-import HelloWorld from "./components/HelloWorld.vue";
 import Timer from "./components/Timer.vue";
+import Members from "@/components/Members.vue";
+import Goals from "@/components/Goals.vue";
 
 @Component({
   components: {
-    HelloWorld,
+    Goals,
+    Members,
     Timer
   }
 })
