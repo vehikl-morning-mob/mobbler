@@ -1,13 +1,16 @@
 <template>
-  <div>
-    Members
-  </div>
+    <div>
+        <member :key="n" v-for="n in 4"/>
+    </div>
 </template>
 
 <script lang="ts">
-import { Component, Vue } from "vue-property-decorator";
+    import {Component, Vue} from "vue-property-decorator";
+    import Member from "@/components/Member.vue";
 
-@Component
-export default class Members extends Vue {
-}
+    @Component({
+        components: {Member}
+    })
+    export default class Members extends Vue {
+    }
 </script>
