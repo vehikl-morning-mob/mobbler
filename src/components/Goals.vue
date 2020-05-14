@@ -22,7 +22,13 @@ export default class Goals extends Vue {}
 <style lang="scss">
 .container {
   box-shadow: 15px 4px 54px rgba(0, 0, 0, 0.05);
+  min-width: 300px;
   width: 33%;
   height: 100vh;
+  label {
+    font-weight: bold;
+  }
 }
+
+
 </style>
